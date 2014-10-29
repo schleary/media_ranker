@@ -4,14 +4,14 @@
     <th>Name</th>
     <th>Upvote</th>
   </tr>
+  <% @albums.each do |album| %>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
+    <td> Ranking: </td>
+    <td><%= link_to album.name, albums_show_path(album) %></td>
+    <td><%= link_to "Upvote", albums_show_path(album), class: "btn btn-default" %></td>
   </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
+  <% end %>
 </table>
+
+<%= link_to "View All Media", root_path, class:"btn btn-default" %>
+<%= link_to "Add an Album", albums_new_path, class:"btn btn-default" %>

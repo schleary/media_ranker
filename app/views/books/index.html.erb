@@ -1,18 +1,17 @@
-<h2> </h2>
 <table class="table table-hover">
   <tr>
     <th>Ranking</th>
     <th>Name</th>
     <th>Upvote</th>
   </tr>
+  <% @books.each do |book| %>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
+    <td> Ranking: </td>
+    <td><%= link_to book.name, books_show_path(book) %></td>
+    <td><%= link_to "Upvote", books_show_path(book), class: "btn btn-default" %></td>
   </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
+  <% end %>
 </table>
+
+<%= link_to "View All Media", root_path, class:"btn btn-default" %>
+<%= link_to "Add a book", books_new_path, class:"btn btn-default" %>

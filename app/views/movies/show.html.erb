@@ -8,13 +8,12 @@ Ranked: <%= @movie.rank %>
 <button type="button" class="btn btn-primary">Upvote</button>
 <p>
 <!-- Standard button -->
-<button type="button" class="btn btn-default">Edit <%= @movie.name %></button>
+<%= link_to "Edit #{@movie.name}", movies_edit_path(@movie), class:"btn btn-default" %>
 
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Delete</button>
-
-<!-- Standard button -->
-<button type="button" class="btn btn-default">View All movies</button>
+<%= link_to "DELETE", movies_destroy_path(@movie), class: "btn btn-danger" %>
 
 <!-- Standard button -->
-<button type="button" class="btn btn-default">View All Media</button>
+<%= link_to "View All Movies", movies_path, class:"btn btn-default" %>
+
+<!-- Standard button -->
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>

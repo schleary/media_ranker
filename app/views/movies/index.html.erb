@@ -4,14 +4,14 @@
     <th>Name</th>
     <th>Upvote</th>
   </tr>
+  <% @movies.each do |movie| %>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
+    <td> Ranking: </td>
+    <td><%= link_to movie.name, movies_show_path(movie) %></td>
+    <td><%= link_to "Upvote", movies_show_path(movie), class: "btn btn-default" %></td>
   </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
+  <% end %>
 </table>
+
+<%= link_to "View All Media", root_path, class:"btn btn-default" %>
+<%= link_to "Add a movie", movies_new_path, class:"btn btn-default" %>

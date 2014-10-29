@@ -8,13 +8,12 @@ Ranked: <%= @book.rank %>
 <button type="button" class="btn btn-primary">Upvote</button>
 <p>
 <!-- Standard button -->
-<button type="button" class="btn btn-default">Edit <%= @book.name %></button>
+<%= link_to "Edit #{@book.name}", books_edit_path(@book), class:"btn btn-default" %>
 
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Delete</button>
-
-<!-- Standard button -->
-<button type="button" class="btn btn-default">View All Books</button>
+<%= link_to "DELETE", books_destroy_path(@book), class: "btn btn-danger" %>
 
 <!-- Standard button -->
-<button type="button" class="btn btn-default">View All Media</button>
+<%= link_to "View All Books", books_path, class:"btn btn-default" %>
+
+<!-- Standard button -->
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>

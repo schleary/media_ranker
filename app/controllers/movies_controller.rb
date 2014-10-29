@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(find_params)
-      redirect_to @movie
+      redirect_to movies_show_path(@movie)
     else
       render 'edit'
     end
@@ -38,7 +38,7 @@ class MoviesController < ApplicationController
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-    redirect_to movies_path
+    redirect_to movies_path(@movie)
   end
 
   private

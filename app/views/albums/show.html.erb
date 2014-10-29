@@ -5,16 +5,10 @@ Ranked: <%= @album.rank %>
 <p>
 
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Upvote</button>
+<button type="button" class="btn btn-primary"> Upvote</button>
+
 <p>
-<!-- Standard button -->
-<button type="button" class="btn btn-default">Edit <%= @album.name %></button>
-
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Delete</button>
-
-<!-- Standard button -->
-<button type="button" class="btn btn-default">View All albums</button>
-
-<!-- Standard button -->
-<button type="button" class="btn btn-default">View All Media</button>
+<%= link_to "Edit #{@album.name}", albums_edit_path(@album), class:"btn btn-default" %>
+<%= link_to "DELETE", albums_destroy_path(@album), class: "btn btn-danger" %>
+<%= link_to "View All Albums", albums_path, class:"btn btn-default" %>
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>
