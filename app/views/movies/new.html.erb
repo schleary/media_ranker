@@ -1,0 +1,17 @@
+<h2>New movie</h2>
+
+<%= form_for @movie, url: {action: "create"} do |movie| %>
+  <div class="form-group">
+    <label>Name</label>
+    <%= movie.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label>Director</label>
+    <%= movie.text_field :director, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <%= movie.text_area :description, class: "form-control" %>
+  </div>
+  <%= movie.submit "Save", class: "btn btn-default" %>
+<% end %>

@@ -1,0 +1,20 @@
+<h1><%= @movie.name %><small> Directed by: <%= @movie.director %></small></h1>
+Ranked: <%= @movie.rank %>
+<p>
+<%= @movie.description %>
+<p>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Upvote</button>
+<p>
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Edit <%= @movie.name %></button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Delete</button>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">View All movies</button>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">View All Media</button>

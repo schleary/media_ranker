@@ -1,0 +1,20 @@
+<h1><%= @album.name %><small> Recorded by: <%= @album.artist %></small></h1>
+Ranked: <%= @album.rank %>
+<p>
+<%= @album.description %>
+<p>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Upvote</button>
+<p>
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Edit <%= @album.name %></button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Delete</button>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">View All albums</button>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">View All Media</button>

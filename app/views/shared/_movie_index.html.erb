@@ -1,0 +1,19 @@
+
+<div class = "col-lg-4">
+
+  <h1>Top Movies</h1>
+
+  <% if @movies.size != 0 %>
+    <% @movies.each do |movie| %>
+      <h2><%= link_to movie.name, movies_show_path(movie) %>
+        <small>Ranked: </small>
+      </h2>
+    <% end %>
+  <% else %>
+    Oops... There are not movies yet,
+    <%= link_to "add one.", movies_new_path %>
+  <% end %>
+  <p>
+  View More Movies
+
+</div>
