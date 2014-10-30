@@ -3,7 +3,7 @@
 
   <h1>Top Albums</h1>
 
-  <% if @albums.size != 0 %>
+  <% if @albums.any?%>
     <% @albums.each do |album| %>
       <h2><%= link_to album.name, albums_show_path(album) %>
         <small>Ranked: <%= album.rank %></small>

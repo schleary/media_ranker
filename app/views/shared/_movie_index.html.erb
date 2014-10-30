@@ -3,7 +3,7 @@
 
   <h1>Top Movies</h1>
 
-  <% if @movies.size != 0 %>
+  <% if @movies.any? %>
     <% @movies.each do |movie| %>
       <h2><%= link_to movie.name, movies_show_path(movie) %>
         <small>Ranked: <%= movie.rank %></small>
