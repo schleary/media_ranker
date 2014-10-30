@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   patch	  "/movies/:id",          to:	"movies#update",  as: :movies_update
   get     "/movies/:id/delete",   to: "movies#destroy", as: :movies_destroy
   delete  "/movies/:id",          to:	"movies#destroy", as: :movies_delete
-  
+  get     "/movies/:id/upvote",   to: "movies#upvote",  as: :movies_upvote
+
 
   # Books routes
   get	    "/books",               to:	"books#index",    as: :books
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   patch	  "/books/:id",           to:	"books#update",   as: :books_update
   get     "/books/:id/delete",    to: "books#destroy",  as: :books_destroy
   delete	"/books/:id",           to:	"books#destroy",  as: :books_delete
+  get     "/books/:id/upvote",    to: "books#upvote",   as: :books_upvote
 
   # Albums routes
   get	    "/albums",              to:	"albums#index",   as: :albums
@@ -34,6 +36,8 @@ Rails.application.routes.draw do
   patch	  "/albums/:id",          to:	"albums#update",  as: :albums_update
   get     "/albums/:id/delete",   to: "albums#destroy", as: :albums_destroy
   delete	"/albums/:id",          to:	"albums#destroy", as: :albums_delete
+  get     "/albums/:id/upvote",   to: "albums#upvote",  as: :albums_upvote
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

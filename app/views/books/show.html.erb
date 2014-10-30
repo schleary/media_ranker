@@ -5,7 +5,7 @@ Ranked: <%= @book.rank %>
 <p>
 
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Upvote</button>
+<%= link_to "Upvote", books_upvote_path(@book), class: "btn btn-primary" %>
 <p>
 <!-- Standard button -->
 <%= link_to "Edit #{@book.name}", books_edit_path(@book), class:"btn btn-default" %>

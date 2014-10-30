@@ -6,9 +6,9 @@
   </tr>
   <% @albums.each do |album| %>
   <tr>
-    <td> Ranking: </td>
+    <td> Ranking: <%= album.rank %></td>
     <td><%= link_to album.name, albums_show_path(album) %></td>
-    <td><%= link_to "Upvote", albums_show_path(album), class: "btn btn-default" %></td>
+    <td><%= link_to "Upvote", albums_upvote_path(album), class: "btn btn-default" %></td>
   </tr>
   <% end %>
 </table>

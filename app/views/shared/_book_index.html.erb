@@ -5,7 +5,7 @@
   <% if @books.size != 0 %>
     <% @books.each do |book| %>
       <h2><%= link_to book.name, books_show_path(book) %>
-        <small>Ranked: </small>
+        <small>Ranked: <%= book.rank %></small>
       </h2>
     <% end %>
   <% else %>

@@ -5,8 +5,7 @@ Ranked: <%= @album.rank %>
 <p>
 
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary"> Upvote</button>
-
+<%= link_to "Upvote", albums_upvote_path(@album), class: "btn btn-primary" %>
 <p>
 <%= link_to "Edit #{@album.name}", albums_edit_path(@album), class:"btn btn-default" %>
 <%= link_to "DELETE", albums_destroy_path(@album), class: "btn btn-danger" %>

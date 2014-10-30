@@ -6,14 +6,14 @@
   <% if @albums.size != 0 %>
     <% @albums.each do |album| %>
       <h2><%= link_to album.name, albums_show_path(album) %>
-        <small>Ranked: </small>
+        <small>Ranked: <%= album.rank %></small>
       </h2>
+      <%= link_to "View More Albums", albums_path %>
     <% end %>
   <% else %>
     Oops... There are not albums yet,
     <%= link_to "add one.", albums_new_path %>
   <% end %>
   <p>
-  View More albums
 
 </div>

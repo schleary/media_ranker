@@ -5,7 +5,7 @@ Ranked: <%= @movie.rank %>
 <p>
 
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Upvote</button>
+<%= link_to "Upvote", movies_upvote_path(@movie), class: "btn btn-primary" %>
 <p>
 <!-- Standard button -->
 <%= link_to "Edit #{@movie.name}", movies_edit_path(@movie), class:"btn btn-default" %>

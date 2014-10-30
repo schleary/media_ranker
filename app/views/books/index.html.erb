@@ -6,9 +6,9 @@
   </tr>
   <% @books.each do |book| %>
   <tr>
-    <td> Ranking: </td>
+    <td> Ranking: <%= book.rank %></td>
     <td><%= link_to book.name, books_show_path(book) %></td>
-    <td><%= link_to "Upvote", books_show_path(book), class: "btn btn-default" %></td>
+    <td><%= link_to "Upvote", books_upvote_path(book), class: "btn btn-default" %></td>
   </tr>
   <% end %>
 </table>

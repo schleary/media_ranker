@@ -13,6 +13,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(find_params)
+    @book.rank = 0
     if @book.save
       redirect_to books_show_path(@book)
     else
@@ -42,6 +43,17 @@ class BooksController < ApplicationController
     @book.destroy
     redirect_to books_path
   end
+
+  def upvote
+    @book = Book.find(params[:id])
+    @book.rank += 1
+    if @book.save
+      redirect_to books_show_path(@book)
+    else
+      render 'show'
+    end
+  end
+
 
   private
 
