@@ -8,6 +8,6 @@ Ranked: <%= @album.rank %>
 <%= link_to "Upvote", albums_upvote_path(@album), class: "btn btn-primary" %>
 <p>
 <%= link_to "Edit #{@album.name}", albums_edit_path(@album), class:"btn btn-default" %>
-<%= link_to "DELETE", albums_destroy_path(@album), class: "btn btn-danger" %>
+<%= link_to "DELETE", albums_destroy_path(@album), class: "btn btn-danger", onclick: "myFunction()"%>
 <%= link_to "View All Albums", albums_path, class:"btn btn-default" %>
 <%= link_to "View All Media", root_path, class: "btn btn-default" %>
