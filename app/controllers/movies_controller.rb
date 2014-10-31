@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
 
 
   def index
-    @movies = Movie.all
+    @movies = Movie.all.sort_by{|i| -i[:rank]}
   end
 
   def new

@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
   def index
-    @albums = Album.all
+    @albums = Album.all.sort_by{|i| -i[:rank]}
   end
 
   def new
