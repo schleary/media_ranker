@@ -14,3 +14,11 @@
 //= require jquery_ujs
 
 //= require_tree .
+
+
+function myFunction(event) {
+   if (!confirm("Are you sure?")) {
+     event.stopPropagation(); //js
+     event.preventDefault();  //non-js
+   }
+}
