@@ -5,7 +5,7 @@
   <% if @books.any? %>
     <% @books.each do |book| %>
       <h2><%= link_to book.name, books_show_path(book) %>
-        <small>Ranked: <%= book.rank %></small>
+        <small>Votes: <%= book.rank %></small>
       </h2>
     <% end %>
     </br>

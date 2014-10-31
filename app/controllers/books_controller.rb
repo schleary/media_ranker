@@ -13,7 +13,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(find_params)
-    @book.rank = 0
+    @book.rank = 1
     if @book.save
       redirect_to books_show_path(@book)
     else

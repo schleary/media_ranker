@@ -10,7 +10,7 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(find_params)
-    @album.rank = 0
+    @album.rank = 1
     if @album.save
       redirect_to albums_show_path(@album)
     else

@@ -1,12 +1,12 @@
 <table class="table table-hover">
   <tr>
-    <th>Ranking</th>
+    <th>Votes</th>
     <th>Name</th>
     <th>Upvote</th>
   </tr>
   <% @movies.each do |movie| %>
   <tr>
-    <td> Ranking: <%= movie.rank %></td>
+    <td> Votes: <%= movie.rank %></td>
     <td><%= link_to movie.name, movies_show_path(movie) %></td>
     <td><%= link_to "Upvote", movies_upvote_path(movie), class: "btn btn-default" %></td>
   </tr>

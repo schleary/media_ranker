@@ -6,7 +6,7 @@
   <% if @movies.any? %>
     <% @movies.each do |movie| %>
       <h2><%= link_to movie.name, movies_show_path(movie) %>
-        <small>Ranked: <%= movie.rank %></small>
+        <small>Votes: <%= movie.rank %></small>
       </h2>
     <% end %>
     </br>
