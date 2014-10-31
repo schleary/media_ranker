@@ -4,16 +4,9 @@
 <%= @movie.description %>
 <p>
 
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 <%= link_to "Upvote", movies_upvote_path(@movie), class: "btn btn-primary" %>
 <p>
-<!-- Standard button -->
 <%= link_to "Edit #{@movie.name}", movies_edit_path(@movie), class:"btn btn-default" %>
-
-<%= link_to "DELETE", movies_destroy_path(@movie), class: "btn btn-danger" %>
-
-<!-- Standard button -->
+<%= link_to "DELETE", movies_destroy_path(@movie), class: "btn btn-danger", onclick: "myFunction(event)" %>
 <%= link_to "View All Movies", movies_path, class:"btn btn-default" %>
-
-<!-- Standard button -->
 <%= link_to "View All Media", root_path, class: "btn btn-default" %>

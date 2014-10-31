@@ -4,16 +4,10 @@
 <%= @book.description %>
 <p>
 
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 <%= link_to "Upvote", books_upvote_path(@book), class: "btn btn-primary" %>
 <p>
-<!-- Standard button -->
+
 <%= link_to "Edit #{@book.name}", books_edit_path(@book), class:"btn btn-default" %>
-
-<%= link_to "DELETE", books_destroy_path(@book), class: "btn btn-danger" %>
-
-<!-- Standard button -->
+<%= link_to "DELETE", books_destroy_path(@book), class: "btn btn-danger", onclick: "myFunction(event)" %>
 <%= link_to "View All Books", books_path, class:"btn btn-default" %>
-
-<!-- Standard button -->
 <%= link_to "View All Media", root_path, class: "btn btn-default" %>
