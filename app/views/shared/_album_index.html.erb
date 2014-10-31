@@ -8,8 +8,9 @@
       <h2><%= link_to album.name, albums_show_path(album) %>
         <small>Ranked: <%= album.rank %></small>
       </h2>
-      <%= link_to "View More Albums", albums_path %>
     <% end %>
+    </br>
+    <%= link_to "View More Albums", albums_path %>
   <% else %>
     Oops... There are not albums yet,
     <%= link_to "add one.", albums_new_path %>
