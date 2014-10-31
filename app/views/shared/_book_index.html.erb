@@ -8,11 +8,11 @@
         <small>Ranked: <%= book.rank %></small>
       </h2>
     <% end %>
+    <%= link_to "View More Books", albums_path %>
   <% else %>
     Oops... There are not books yet,
     <%= link_to "add one.", books_new_path %>
   <% end %>
   <p>
-  View More Books
 
 </div>
