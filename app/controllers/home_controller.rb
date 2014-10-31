@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
 
   def index
-    @books = Book.all.limit(10).sort_by{|i| -i[:rank]}
-    @movies = Movie.all.limit(10).sort_by{|i| -i[:rank]}
-    @albums = Album.all.limit(10).sort_by{|i| -i[:rank]}
+    @books = Book.sort_by_rank
+    @movies = Movie.sort_by_rank
+    @albums = Album.sort_by_rank
   end
 
   def new
