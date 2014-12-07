@@ -4,10 +4,12 @@
 <%= @book.description %>
 <p>
 
-<%= link_to "Upvote", books_upvote_path(@book), class: "btn btn-primary" %>
+
 <p>
 
-<%= link_to "Edit #{@book.name}", books_edit_path(@book), class:"btn btn-default" %>
-<%= link_to "DELETE", books_destroy_path(@book), class: "btn btn-danger", onclick: "myFunction(event)" %>
-<%= link_to "View All Books", books_path, class:"btn btn-default" %>
-<%= link_to "View All Media", root_path, class: "btn btn-default" %>
+<%= link_to "Edit #{@book.name}", books_edit_path(@book), class:"s btn btn-default" %>
+<%= link_to "Delete", books_destroy_path(@book), class: "t btn btn-danger", onclick: "myFunction(event)" %>
+<%= link_to "View All Books", books_path, class:" q btn btn-default" %>
+<%= link_to "View All Media", root_path, class: " r btn btn-default" %>
+<%= link_to "Upvote", books_upvote_path(@book), class: "u btn btn-primary" %>
+<%= link_to "Upvote", books_upvote_path(@book), class: "v btn btn-primary" %>
